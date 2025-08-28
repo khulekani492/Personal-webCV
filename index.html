@@ -4,6 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=5">
         <title>Resume</title>
          <link rel="stylesheet" href="style.css">
+         <!-- <script defer src="display.js"></script> -->
+
 
     </head>
     <body >
@@ -11,12 +13,12 @@
   <div class="profile">
 
   </div>
-  <div class="brief">
-    <button style="bottom: 1%; right: 0; position: absolute; border-radius: 65%;">Projects</button>
+  <div id="brief">
+    <button style="bottom: 1%; right: 0; position: absolute; border-radius: 65%;" onclick="yes()">Projects</button>
     <p>HI THERE..<br>Kindly click <br> project button</p>
 
   </div>
-  <div class="personalprojects">
+  <div id="personalprojects">
     <p>CLICK IMAGE for a brief overview of each project. </p>
     <div class="alert-navigation">
         <p>A<em>N</em></p>
@@ -56,11 +58,23 @@
   <div class="proof">
     <h3>Proof REPORT</h3>
   </div>
- 
 </div>
+           <script>
+    let visibility = true; // brief starts visible
+    const formdiv = document.getElementById("brief");
 
-
-
-
+    function yes() {
+      if (visibility) {
+        // Hide
+        formdiv.style.display = "none";
+        visibility = false;
+      } else {
+        // Show
+        formdiv.style.display = "block";
+        formdiv.style.border = "2px solid";
+        visibility = true;
+      }
+    }
+  </script>
     </body>
 </html>

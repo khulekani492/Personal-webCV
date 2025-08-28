@@ -24,7 +24,7 @@ html,body{
   text-align: center;
   position: relative;
 }
-.brief{
+#brief{
   position: absolute;  
   top: 3%;
  
@@ -35,7 +35,7 @@ html,body{
   border-radius: 25%;
 
 }
-.personalprojects{
+#personalprojects{
   position: absolute;  
   top: 3%;
   margin-left: 50%;
