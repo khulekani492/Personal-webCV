@@ -6,17 +6,17 @@ html,body{
   
 
 }
-.profile{
+#profile{
   position: absolute;  
   top: 3%;
  
   margin-left: 7%;
   border: 1px solid #333333;
   height: 30%;
-  width: 30%;
+  width: 25%;
 
 }
-.box {
+#box {
   height: 200vh;
   width: 100%;
   border: #555;
@@ -25,24 +25,41 @@ html,body{
   position: relative;
 }
 #brief{
-  position: absolute;  
-  top: 3%;
- 
-  margin-left: 40%;
-  border: 1px solid #333333;
-  height: 15%;
-  width: 15%;
-  border-radius: 25%;
+ position: absolute;  
+  top: 5%;
+  margin-left: 30%;
+  width: 300px;   /* use px instead of % for better control */
+  height: 300px;
+  
+  background-image: url("ChatGPT\ Image\ Aug\ 29\,\ 2025\,\ 08_45_49\ PM.png"); /* 👈 add your image here */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
+
+
+#brief p{  
+  font-size: 15px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  margin: 0;
+  
+}
+
 #personalprojects{
   position: absolute;  
   top: 3%;
   margin-left: 50%;
-  border: 1px solid #333333;
-  height: 15%;
+  border: 4px solid pink;
+  height: 19%;
   width: 35%;
   padding: 50px;
+  background-color: aliceblue;
 }
 .alert-navigation{
     position: absolute;
@@ -57,7 +74,7 @@ html,body{
     border: 2px solid  black;
     height: 51%;
     width: 20%;
-    margin-left: 30%;
+    margin-left: 32%;
 
 }
 .firstproject{
@@ -107,9 +124,33 @@ html,body{
    border: 2px solid rgb(241, 143, 14);
    width: 15%;
    height: 20%;
-   bottom: 0%;
+   bottom: 15%;
 
 }
 
+.wrapper {
+  height: 200px;
+  display: flex;
+  gap: 20px;
+}
 
+.box {
+  border: 5px solid black;
+}
 
+.box img {
+  width: 100%;
+  height: 100%;
+}
+
+.alert-navigation img {
+  object-fit: cover;
+}
+
+.mastende {
+  object-fit: contain;
+}
+
+ .firstproject {
+  object-fit: fill;
+}
