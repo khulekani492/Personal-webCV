@@ -15,7 +15,7 @@
 
   </div>
   <div id="brief">
-    <button style="bottom: 1%; right: 99%; position: absolute; border-radius: 65%;" onclick="valavula()">Projects</button>
+    <button style="bottom: 1%; right: 33%; position: absolute; border-radius: 5%;" onclick="valavula()">Projects</button>
     <p>HI THERE..<br>Kindly click <br> project button</p>
 
   </div>
@@ -66,13 +66,12 @@
 
   function valavula(){
      const intro = document.getElementById("personalprojects");
-     intro.style.display = "none";
      if (!state){
-      intro.style.display = "block";
+      intro.style.display = "none";
       state = true;
      }else{
       if (intro){
-        intro.style.display = "none";
+        intro.style.display = "block";
 
       }
       state = false;
