@@ -66,7 +66,7 @@
 
   </div>
   <div class="proof">
-    <h3>ACADEMIC REPORT</h3><br><button  onclick="nigga()">ME</button>
+    <h3>ACADEMIC REPORT</h3><br>
   </div>
 </div>
     </body>
@@ -76,12 +76,11 @@
   function valavula(){
      const intro = document.getElementById("personalprojects");
      if (!state){
-      intro.style.display = "none";
+      intro.style.display = "block";     
       state = true;
      }else{
       if (intro){
-        intro.style.display = "block";
-
+        intro.style.display = "none";
       }
       state = false;
      }

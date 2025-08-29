@@ -60,6 +60,7 @@ html,body{
   width: 35%;
   padding: 50px;
   background-color: aliceblue;
+  display: none;
 }
 .alert-navigation{
     position: absolute;
