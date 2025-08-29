@@ -7,18 +7,19 @@
          <!-- <script defer src="display.js"></script> -->
 
 
+
     </head>
     <body >
-        <div class="box" >
-  <div class="profile">
+        <div id="box" >
+  <div id="profile">
 
   </div>
   <div id="brief">
-    <button style="bottom: 1%; right: 0; position: absolute; border-radius: 65%;" onclick="yes()">Projects</button>
+    <button style="bottom: 1%; right: 99%; position: absolute; border-radius: 65%;" onclick="valavula()">Projects</button>
     <p>HI THERE..<br>Kindly click <br> project button</p>
 
   </div>
-  <div id="personalprojects">
+  <div id="personalprojects" style="color: aquamarine;">
     <p>CLICK IMAGE for a brief overview of each project. </p>
     <div class="alert-navigation">
         <p>A<em>N</em></p>
@@ -56,25 +57,28 @@
 
   </div>
   <div class="proof">
-    <h3>Proof REPORT</h3>
+    <h3>Proof REPORT</h3><br><button  onclick="nigga()">ME</button>
   </div>
 </div>
-           <script>
-    let visibility = true; // brief starts visible
-    const formdiv = document.getElementById("brief");
-
-    function yes() {
-      if (visibility) {
-        // Hide
-        formdiv.style.display = "none";
-        visibility = false;
-      } else {
-        // Show
-        formdiv.style.display = "block";
-        formdiv.style.border = "2px solid";
-        visibility = true;
-      }
-    }
-  </script>
     </body>
+ <script>
+  let state = false;
+
+  function valavula(){
+     const intro = document.getElementById("personalprojects");
+     intro.style.display = "none";
+     if (!state){
+      intro.style.display = "block";
+      state = true;
+     }else{
+      if (intro){
+        intro.style.display = "none";
+
+      }
+      state = false;
+     }
+  }
+ 
+ </script>
 </html>
+<script>
