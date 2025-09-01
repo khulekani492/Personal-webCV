@@ -91,7 +91,6 @@ html,body{
     margin-top: 20px;
     position: absolute;
     margin-left: 7%;
-    border: 2px solid black;
     width: 70%;
     height: 16%;
     bottom: 50%;
@@ -100,11 +99,13 @@ html,body{
     
 }
 .detail {
-  border: 2px solid burlywood;
   color: black;
 }
-.detail h3{
-  background-color:whitesmoke;
+
+.detail button{
+  color: aqua;
+  background-color:navy;
+  
 }
 
 #education{
@@ -122,10 +123,6 @@ html,body{
     
 
 }
-/* #socialMedia ul{
-  
-} */
-
 #achievements{
     margin-left:70%; 
     left: 0; 
@@ -140,6 +137,7 @@ html,body{
    width: 15%;
    height: 20%;
    bottom: 15%;
+   
 
 }
 
