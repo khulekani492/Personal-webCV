@@ -29,7 +29,7 @@
     <p>CLICK IMAGE for a brief overview of each project. </p>
     <div class="wrapper">
     <div class="box alert-navigation">
-        <img alt="AlertNavigation logo" src="ANLOGO.png">
+        <img alt="AlertNavigation logo" src="ANLOGO.png" onclick="projectDescription()">
     </div>
     <div class="box mastende"> 
          <img alt="Matendelogo" src="https://img.freepik.com/free-vector/house-symbol-multiple-styles_78370-8537.jpg">
@@ -69,9 +69,11 @@
     <a href="Khulekani_Zondo_Y1_Report-2.pdf"  > 
       <ul><li>   
           <h3>First Academic Report</h3>
+          
            </li>
           </ul> 
     </a>
+   <button onclick="projectDescription()">pg</button> 
   </div>
 </div>
     </body>
@@ -89,6 +91,32 @@
       }
       state = false;
      }
+  }
+
+  function projectDescription(){
+      const main_box = document.getElementById("personalprojects");
+
+      main_box.style.display = "block";
+
+  // clear children safely (instead of innerHTML = "")
+      while (main_box.firstChild) {
+        main_box.removeChild(main_box.firstChild);}
+
+  // create description div
+      const project_description = document.createElement("div");  
+      project_description.className = "box forDescription";
+      project_description.style.border = "2px solid black";
+      project_description.style.position = "absolute";
+      project_description.style.top = "0%";
+      project_description.style.right = "0%";
+      project_description.style.width = "150px";
+      project_description.style.height = "100px";
+      project_description.style.background = "lightyellow";
+      
+
+  // append to main box
+      main_box.appendChild(project_description);
+    
   }
  
  </script>
