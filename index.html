@@ -101,7 +101,9 @@
      
       
       const techStacklist = document.createElement("ul");
-      const techStackorder = document.createElement("li");
+      
+
+      let techstsck = ["python","SQL"];
 
       
       child_rows.style.display = "flex";
@@ -159,10 +161,23 @@
       techstack.style.width = "150px";
       techstack.style.height = "50px";
       // techstack.style.background = "lightyellow";
-      techstack.textContent = "TechStack";
-
-
+      // techstack.textContent = "TechStack";
+      techStackorder.textContent = "Python";
+      techStacklist.appendChild(techStackorder);
+      techStackorder.textContent = "SPiritual";
+      techStacklist.appendChild(techStackorder);
       
+      techstack.appendChild(techStacklist);
+      
+      for (let i = 0; i <=3 ; i++){
+            const techStackorder = document.createElement("li");
+            techStackorder.textContent = techstsck[i];
+            //TODO fix the loop to create a new li element and append to the list order
+            // techStacklist.appendChild(techStackorder);
+            
+      }
+      techstack.appendChild(techStacklist);
+
       main_box.appendChild(techstack);   
   }
  
