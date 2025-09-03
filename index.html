@@ -95,54 +95,75 @@
 
   function projectDescription(){
       const main_box = document.getElementById("personalprojects");
+      const child_rows = document.createElement("div");
+      const project_Icon = document.createElement("div");
+      const theImg = document.createElement("img");
+     
+      
+      const techStacklist = document.createElement("ul");
+      const techStackorder = document.createElement("li");
 
-      main_box.style.display = "flex";
-      main_box.style.gap = "20px";
-    
-
+      
+      child_rows.style.display = "flex";
+      child_rows.style.gap = "20px";
+      
+      
+      const des = "AlernessMap is a navigation application designed to enhance driver safety by highlighting known hijacking hotspots along the route, helping drivers make more informed and cautious travel decisions.";
+      const rentalproperty = "Keeps track of payments of tenants"
   // clear children safely (instead of innerHTML = "")
       while (main_box.firstChild) {
         main_box.removeChild(main_box.firstChild);}
 
-  // create description div
-      const project_description = document.createElement("div");
-
-      const theImg = document.createElement("img");
-
-      theImg.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7dq2LpyMH4TPJJbUEXUUaBQtOhXZetFaNHA&s"
+      theImg.src = "ANLOGO.png" 
       theImg.alt = "My Logo";
 
       theImg.style.height = "100%";
       theImg.style.width = "100%";
       theImg.style.objectFit = "cover";
-      project_description.className = "boxed forDescription";
-      project_description.style.border = "2px solid black";
-      // project_description.style.position = "absolute";
-      project_description.style.top = "5%";
-      project_description.style.left = "0%";
-      project_description.style.width = "150px";
-      project_description.style.height = "200px";
-      project_description.style.background = "lightyellow";
-
-      project_description.appendChild(theImg);
-
-  // append to main box
-      main_box.appendChild(project_description);
-
-      const project_Icon = document.createElement("div");  
-      project_Icon.className = "boxed forImg";
+      project_Icon.className = "boxed forDescription";
       project_Icon.style.border = "2px solid black";
       // project_Icon.style.position = "absolute";
       project_Icon.style.top = "5%";
-      project_Icon.style.right = "0%";
+      project_Icon.style.left = "0%";
       project_Icon.style.width = "150px";
-      project_Icon.style.height = "100px";
+      project_Icon.style.height = "200px";
       project_Icon.style.background = "lightyellow";
-      
+     
 
-  // append to main box
-      main_box.appendChild(project_Icon);
-    
+      project_Icon.appendChild(theImg);
+
+      
+      child_rows.appendChild(project_Icon);
+      // main_box.appendChild(project_Icon);
+
+      const project_Description = document.createElement("div");  
+      project_Description.className = "boxed forImg";
+      // project_Description.style.border = "2px solid black";
+      // project_Description.style.position = "absolute";
+      project_Description.style.top = "5%";
+      project_Description.style.right = "0%";
+      project_Description.style.width = "170px";
+      project_Description.style.height = "100px";
+      // project_Description.style.background = "lightyellow";
+      project_Description.textContent = des;
+      child_rows.appendChild(project_Description);
+
+      main_box.appendChild(child_rows);
+
+      const techstack = document.createElement("div");
+      techstack.className = "techtools";
+      // techstack.style.border = "2px solid black";
+      techstack.style.position = "absolute";
+      techstack.style.bottom = "25%";
+      techstack.style.left = "11%";
+      techstack.style.width = "150px";
+      techstack.style.height = "50px";
+      // techstack.style.background = "lightyellow";
+      techstack.textContent = "TechStack";
+
+
+      
+      main_box.appendChild(techstack);   
   }
  
  </script>
