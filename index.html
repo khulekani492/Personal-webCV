@@ -96,26 +96,52 @@
   function projectDescription(){
       const main_box = document.getElementById("personalprojects");
 
-      main_box.style.display = "block";
+      main_box.style.display = "flex";
+      main_box.style.gap = "20px";
+    
 
   // clear children safely (instead of innerHTML = "")
       while (main_box.firstChild) {
         main_box.removeChild(main_box.firstChild);}
 
   // create description div
-      const project_description = document.createElement("div");  
-      project_description.className = "box forDescription";
+      const project_description = document.createElement("div");
+
+      const theImg = document.createElement("img");
+
+      theImg.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7dq2LpyMH4TPJJbUEXUUaBQtOhXZetFaNHA&s"
+      theImg.alt = "My Logo";
+
+      theImg.style.height = "100%";
+      theImg.style.width = "100%";
+      theImg.style.objectFit = "cover";
+      project_description.className = "boxed forDescription";
       project_description.style.border = "2px solid black";
-      project_description.style.position = "absolute";
-      project_description.style.top = "0%";
-      project_description.style.right = "0%";
+      // project_description.style.position = "absolute";
+      project_description.style.top = "5%";
+      project_description.style.left = "0%";
       project_description.style.width = "150px";
-      project_description.style.height = "100px";
+      project_description.style.height = "200px";
       project_description.style.background = "lightyellow";
-      
+
+      project_description.appendChild(theImg);
 
   // append to main box
       main_box.appendChild(project_description);
+
+      const project_Icon = document.createElement("div");  
+      project_Icon.className = "boxed forImg";
+      project_Icon.style.border = "2px solid black";
+      // project_Icon.style.position = "absolute";
+      project_Icon.style.top = "5%";
+      project_Icon.style.right = "0%";
+      project_Icon.style.width = "150px";
+      project_Icon.style.height = "100px";
+      project_Icon.style.background = "lightyellow";
+      
+
+  // append to main box
+      main_box.appendChild(project_Icon);
     
   }
  
