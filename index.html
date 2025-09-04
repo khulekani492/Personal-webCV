@@ -99,13 +99,9 @@
       const project_Icon = document.createElement("div");
       const theImg = document.createElement("img");
      
-      
-      
-      
       child_rows.style.display = "flex";
       child_rows.style.gap = "20px";
-      
-      
+       
       const des = "AlertnessMap is a navigation application designed to enhance driver safety by highlighting known hijacking hotspots along the route, helping drivers make more informed and cautious travel decisions.";
       const rentalproperty = "Keeps track of payments of tenants"
   // clear children safely (instead of innerHTML = "")
@@ -147,19 +143,24 @@
 
       main_box.appendChild(child_rows);
       const techStacklist = document.createElement("ul");
+      const gz = document.createElement("li");
+      gz.style.position = "absolute";
+      gz.style.left = "15%";
       const techstack = document.createElement("div");
       techstack.className = "techtools";
       techstack.style.border = "2px solid black";
       techstack.style.position = "absolute";
       techstack.style.bottom = "10%";
-      techstack.style.left = "9%";
+      techstack.style.left = "2%";
       techstack.style.width = "150px";
       techstack.style.height = "50px";
       
-      // techStackorder.textContent = "Python";
-      // techStacklist.appendChild(techStackorder);
+      techstack.textContent = "TechStack";
 
-      // techstack.appendChild(techStacklist);
+      gz.textContent = "Python";
+      techStacklist.appendChild(gz);
+
+      techstack.appendChild(techStacklist);
 
       main_box.appendChild(techstack); 
       // for (let i = 0; i <=3 ; i++){
