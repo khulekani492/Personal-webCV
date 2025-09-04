@@ -143,9 +143,16 @@
 
       main_box.appendChild(child_rows);
       const techStacklist = document.createElement("ul");
-      const gz = document.createElement("li");
-      gz.style.position = "absolute";
-      gz.style.left = "15%";
+      const backend = document.createElement("p");
+      const frontend = document.createElement("p");
+
+      backend.style.position = "absolute";
+      backend.style.left = "15%";
+
+      frontend.style.position = "absolute";
+      frontend.style.right = "0";
+      frontend.style.bottom = "9%";
+
       const techstack = document.createElement("div");
       techstack.className = "techtools";
       techstack.style.border = "2px solid black";
@@ -156,9 +163,12 @@
       techstack.style.height = "50px";
       
       techstack.textContent = "TechStack";
+      
+      frontend.textContent = "frontEnd";
+      backend.textContent = "BackEnd";
 
-      gz.textContent = "Python";
-      techStacklist.appendChild(gz);
+      techStacklist.appendChild(frontend);
+      techStacklist.appendChild(backend);
 
       techstack.appendChild(techStacklist);
 
