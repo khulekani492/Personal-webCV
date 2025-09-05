@@ -137,7 +137,7 @@
       project_Description.style.right = "0%";
       project_Description.style.width = "170px";
       project_Description.style.height = "100px";
-      // project_Description.style.background = "lightyellow";
+      // project_Description.tyle.background = "lightyellow";
       project_Description.textContent = des;
       child_rows.appendChild(project_Description);
 
@@ -147,11 +147,14 @@
       const frontend = document.createElement("p");
 
       backend.style.position = "absolute";
-      backend.style.left = "15%";
+      backend.style.right = "0";
+      backend.style.top = "0";
+      backend.style.border = "2px solid black";
+      backend.style.marginBottom = "100";
 
       frontend.style.position = "absolute";
-      frontend.style.right = "0";
-      frontend.style.bottom = "9%";
+      frontend.style.left = "0";
+      frontend.style.bottom = "0";
 
       const techstack = document.createElement("div");
       techstack.className = "techtools";
@@ -161,31 +164,17 @@
       techstack.style.left = "2%";
       techstack.style.width = "150px";
       techstack.style.height = "50px";
-      
       techstack.textContent = "TechStack";
-      
       frontend.textContent = "frontEnd";
       backend.textContent = "BackEnd";
-
-      techStacklist.appendChild(frontend);
-      techStacklist.appendChild(backend);
-
-      techstack.appendChild(techStacklist);
-
+     
+      techstack.appendChild(frontend);
+      techstack.appendChild(backend);
       main_box.appendChild(techstack); 
-      // for (let i = 0; i <=3 ; i++){
-      //       const techStackorder = document.createElement("li");
-      //       techStackorder.textContent = techstsck[i];
-      //       //TODO fix the loop to create a new li element and append to the list order
-      //       techStacklist.appendChild(techStackorder);
-            
-      // }
-      //techstack.appendChild(techStacklist);
-      
 
      const projectName = document.createElement("div");
      projectName.className = "techtools";
-    //  projectName.style.border = "2px solid black";
+
      projectName.style.position = "absolute";
      projectName.style.top = "4%";
      projectName.style.left = "5%";
