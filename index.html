@@ -157,6 +157,7 @@
       frontend.style.left = "80%";
       frontend.style.bottom = "0";
       frontend.style.top = "10px";
+      
       const techstack = document.createElement("div");
       techstack.className = "techtools";
       techstack.style.border = "2px solid black";
@@ -171,31 +172,46 @@
       techstack.textContent = "TechStack";
 
       frontend.textContent = "frontEnd";
+      frontend.style.border = "2px solid red";
       backend.textContent = "BackEnd";
       backend.style.border = "2px solid yellow";
       techstack.appendChild(frontend);
       techstack.appendChild(backend);
       main_box.appendChild(techstack);
 
-      let ulOrder = document.createElement("ul");
+      let backEndlist = document.createElement("ul");
+
       let liOrder1 = document.createElement("li");
       let liOrder2 = document.createElement("li");
       let liOrder3 = document.createElement("li");
-
-      let fliOrder1 = document.createElement("li");
-      let fliOrder2 = document.createElement("li");
-      let fliOrder3 = document.createElement("li");
 
       liOrder1.textContent  = "Python";
       liOrder2.textContent = "PostgresSQL";
       liOrder3.textContent = "Flask";
       
+   
+
+       
+      backEndlist.appendChild(liOrder1);
+      backEndlist.appendChild(liOrder2);
+      backEndlist.appendChild(liOrder3);
+
+      backend.appendChild(backEndlist);
+
+      let frontendlist = document.createElement("ul");
+
+      let fliOrder1 = document.createElement("li");
+      let fliOrder2 = document.createElement("li");
+      let fliOrder3 = document.createElement("li");
+
+      fliOrder1.textContent  = "html,css,JavaScript";
+      fliOrder2.textContent = "Leaflet";
       
-      ulOrder.appendChild(liOrder1);
-      ulOrder.appendChild(liOrder2);
-      ulOrder.appendChild(liOrder3);
-      
-      backend.appendChild(ulOrder);
+
+      frontendlist.append(fliOrder1);
+      frontendlist.append(fliOrder2);
+     frontend.append(frontendlist);
+
       const projectName = document.createElement("div");
       projectName.className = "techtools";
 
