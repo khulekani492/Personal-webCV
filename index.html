@@ -15,7 +15,6 @@
        <img style="width:100%; height: 100%; object-fit: fill;" src="my_picture.jpeg">
   </div>
   <div id="brief">
-
     <button style="bottom: 1%; right: 36%; position: absolute; border-radius: 15%; padding: 10px;" onclick="valavula()">Projects</button>
     <p>.................</p> 
    <p><br><br> <strong>H</strong>i! Meet me and my techCave.<br>I'M <strong>Khulekani Zondo.</strong><br> <em>F</em>ullstack Software Developer.<br><em>TECHSTACK</em>??
@@ -104,6 +103,10 @@
        
       const des = "AlertnessMap is a navigation application designed to enhance driver safety by highlighting known hijacking hotspots along the route, helping drivers make more informed and cautious travel decisions.";
       const rentalproperty = "Keeps track of payments of tenants"
+
+      const expected = document.createElement("p");
+      
+      child_rows.appendChild(expected);
   // clear children safely (instead of innerHTML = "")
       while (main_box.firstChild) {
         main_box.removeChild(main_box.firstChild);}
@@ -114,52 +117,56 @@
       theImg.style.height = "100%";
       theImg.style.width = "100%";
       theImg.style.objectFit = "cover";
-      project_Icon.className = "boxed forDescription";
+      project_Icon.className = "boxed forImg";
       project_Icon.style.border = "2px solid black";
-      // project_Icon.style.position = "absolute";
       project_Icon.style.top = "5%";
       project_Icon.style.left = "0%";
       project_Icon.style.width = "150px";
       project_Icon.style.height = "200px";
-      project_Icon.style.background = "lightyellow";
-     
-
-      project_Icon.appendChild(theImg);
-
       
+     
+      project_Icon.appendChild(theImg);
       child_rows.appendChild(project_Icon);
       // main_box.appendChild(project_Icon);
-
+     
       const project_Description = document.createElement("div");  
-      project_Description.className = "boxed forImg";
+      project_Description.className = "boxed forDescription";
 
       project_Description.style.top = "5%";
       project_Description.style.right = "0%";
-      project_Description.style.width = "170px";
+      project_Description.style.width = "200px";
       project_Description.style.height = "100px";
-      // project_Description.tyle.background = "lightyellow";
-      project_Description.textContent = des;
+      project_Description.style.border = "2px solid black";
+      project_Description.style.display = "flex";
+      project_Description.style.justifyContent = "center";
+      project_Description.style.alignItems = "center";
+
+   //   project_Description.textContent = rentalproperty;
+
       child_rows.appendChild(project_Description);
 
       main_box.appendChild(child_rows);
+
       const techStacklist = document.createElement("ul");
       const backend = document.createElement("p");
       const frontend = document.createElement("p");
+      
+      const test = document.createElement("p");
 
       backend.style.position = "absolute";
       backend.style.right = "30%";
       backend.style.top = "0";
       backend.style.border = "2px solid black";
       
-
       frontend.style.position = "absolute";
-
       frontend.style.left = "80%";
       frontend.style.bottom = "0";
       frontend.style.top = "10px";
-      
+
       const techstack = document.createElement("div");
       techstack.className = "techtools";
+      techstack.display = "flex";
+      techstack.style.gap = "20px";
       techstack.style.border = "2px solid black";
       techstack.style.position = "absolute";
       techstack.style.padding = "10px";
@@ -189,9 +196,6 @@
       liOrder2.textContent = "PostgresSQL";
       liOrder3.textContent = "Flask";
       
-   
-
-       
       backEndlist.appendChild(liOrder1);
       backEndlist.appendChild(liOrder2);
       backEndlist.appendChild(liOrder3);
@@ -210,7 +214,7 @@
 
       frontendlist.append(fliOrder1);
       frontendlist.append(fliOrder2);
-     frontend.append(frontendlist);
+      frontend.append(frontendlist);
 
       const projectName = document.createElement("div");
       projectName.className = "techtools";
