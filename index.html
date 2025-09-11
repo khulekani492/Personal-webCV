@@ -137,12 +137,13 @@
       project_Description.style.width = "200px";
       project_Description.style.height = "100px";
       project_Description.style.border = "2px solid black";
-      project_Description.style.display = "flex";
+      //project_Description.style.display = "none";
       project_Description.style.justifyContent = "center";
       project_Description.style.alignItems = "center";
-
+     
       project_Description.textContent = des;
-
+      
+      child_rows.style.border = "2px solid blue";
       child_rows.appendChild(project_Description);
 
       main_box.appendChild(child_rows);
@@ -150,13 +151,12 @@
       const techStacklist = document.createElement("ul");
       const backend = document.createElement("p");
       const frontend = document.createElement("p");
-      
       const test = document.createElement("p");
 
       backend.style.position = "absolute";
       backend.style.right = "30%";
       backend.style.top = "0";
-      backend.style.border = "2px solid black";
+      //backend.style.border = "2px solid black";
       
       frontend.style.position = "absolute";
       frontend.style.left = "80%";
@@ -167,21 +167,29 @@
       techstack.className = "techtools";
       techstack.display = "flex";
       techstack.style.gap = "20px";
-      techstack.style.border = "2px solid black";
+      //techstack.style.border = "2px solid black";
       techstack.style.position = "absolute";
       techstack.style.padding = "10px";
       techstack.style.bottom = "21%";
       techstack.style.left = "2%";
       techstack.style.width = "180px";
+      techstack.style.padding = "10px";
       techstack.style.height = "50px";
-
-      backend.style.padding = "10px";
+      techstack.style.id = "khule";
       techstack.textContent = "TechStack";
+      techstack.style.textAlign = "right";
+      backend.style.padding = "12px";
 
+      //techstack.textContent = "TechStack";
+      frontend.id = "phambile";
+      let ifyesGet = document.getElementById("phambile");
+      frontend.style.textAlign = "left";
       frontend.textContent = "frontEnd";
-      frontend.style.border = "2px solid red";
+
+      //frontend.style.border = "2px solid red";
       backend.textContent = "BackEnd";
-      backend.style.border = "2px solid yellow";
+      backend.style.left = "20px";
+     // backend.style.border = "2px solid yellow";
       techstack.appendChild(frontend);
       techstack.appendChild(backend);
       main_box.appendChild(techstack);
