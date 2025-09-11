@@ -20,7 +20,7 @@ html,body{
   height: 200vh;
   width: 100%;
   border: #555;
-  background-color: palevioletred;
+  background-color: rgb(209, 20, 83);
   text-align: center;
   position: relative;
 }
