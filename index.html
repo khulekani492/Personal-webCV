@@ -97,16 +97,16 @@
       const child_rows = document.createElement("div");
       const project_Icon = document.createElement("div");
       const theImg = document.createElement("img");
-     
+      
       child_rows.style.display = "flex";
+      child_rows.style.position = "absolute";
       child_rows.style.gap = "20px";
        
+         
       const des = "AlertnessMap is a navigation application designed to enhance driver safety by highlighting known hijacking hotspots along the route, helping drivers make more informed and cautious travel decisions.";
       const rentalproperty = "Keeps track of payments of tenants"
 
-      const expected = document.createElement("p");
       
-      child_rows.appendChild(expected);
   // clear children safely (instead of innerHTML = "")
       while (main_box.firstChild) {
         main_box.removeChild(main_box.firstChild);}
@@ -117,6 +117,8 @@
       theImg.style.height = "100%";
       theImg.style.width = "100%";
       theImg.style.objectFit = "cover";
+
+      project_Icon.style.flexShrink = "0";
       project_Icon.className = "boxed forImg";
       project_Icon.style.border = "2px solid black";
       project_Icon.style.top = "5%";
@@ -133,6 +135,7 @@
       project_Description.className = "boxed forDescription";
 
       project_Description.style.top = "5%";
+      project_Description.style.flexShrink = "0";
       project_Description.style.right = "0%";
       project_Description.style.width = "200px";
       project_Description.style.height = "100px";
@@ -143,7 +146,7 @@
      
       project_Description.textContent = des;
       
-      child_rows.style.border = "2px solid blue";
+      //child_rows.style.border = "2px solid green";
       child_rows.appendChild(project_Description);
 
       main_box.appendChild(child_rows);
@@ -185,6 +188,11 @@
       let ifyesGet = document.getElementById("phambile");
       frontend.style.textAlign = "left";
       frontend.textContent = "frontEnd";
+
+//       Array.from(child_rows.children).forEach(item => {
+//           item.style.flexShrink = "0";   // stops shrinking
+//           item.style.flexBasis = "150px"; // optional fixed size
+// });
 
       //frontend.style.border = "2px solid red";
       backend.textContent = "BackEnd";
