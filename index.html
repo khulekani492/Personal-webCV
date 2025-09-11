@@ -98,9 +98,12 @@
       const project_Icon = document.createElement("div");
       const theImg = document.createElement("img");
       
+      main_box.style.overflow = "hidden";
+      
       child_rows.style.display = "flex";
-      child_rows.style.position = "absolute";
+      //child_rows.style.position = "relative";
       child_rows.style.gap = "20px";
+      //child_rows.style.flexWrap = "wrap"
        
          
       const des = "AlertnessMap is a navigation application designed to enhance driver safety by highlighting known hijacking hotspots along the route, helping drivers make more informed and cautious travel decisions.";
