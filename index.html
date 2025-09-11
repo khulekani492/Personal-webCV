@@ -98,12 +98,11 @@
       const project_Icon = document.createElement("div");
       const theImg = document.createElement("img");
       
-      main_box.style.overflow = "hidden";
+      main_box.style.overflow = "hidden"; //Stops children divs from escaping
       
       child_rows.style.display = "flex";
-      //child_rows.style.position = "relative";
       child_rows.style.gap = "20px";
-      //child_rows.style.flexWrap = "wrap"
+      
        
          
       const des = "AlertnessMap is a navigation application designed to enhance driver safety by highlighting known hijacking hotspots along the route, helping drivers make more informed and cautious travel decisions.";
@@ -186,21 +185,13 @@
       techstack.style.textAlign = "right";
       backend.style.padding = "12px";
 
-      //techstack.textContent = "TechStack";
-      frontend.id = "phambile";
-      let ifyesGet = document.getElementById("phambile");
+      
       frontend.style.textAlign = "left";
       frontend.textContent = "frontEnd";
 
-//       Array.from(child_rows.children).forEach(item => {
-//           item.style.flexShrink = "0";   // stops shrinking
-//           item.style.flexBasis = "150px"; // optional fixed size
-// });
-
-      //frontend.style.border = "2px solid red";
       backend.textContent = "BackEnd";
+      
       backend.style.left = "20px";
-     // backend.style.border = "2px solid yellow";
       techstack.appendChild(frontend);
       techstack.appendChild(backend);
       main_box.appendChild(techstack);
@@ -211,9 +202,9 @@
       let liOrder2 = document.createElement("li");
       let liOrder3 = document.createElement("li");
 
-      liOrder1.textContent  = "Python";
-      liOrder2.textContent = "PostgresSQL";
-      liOrder3.textContent = "Flask";
+      liOrder1.textContent ="Python";
+      liOrder2.textContent ="Postgres";
+      liOrder3.textContent= "Flask";
       
       backEndlist.appendChild(liOrder1);
       backEndlist.appendChild(liOrder2);
@@ -237,7 +228,6 @@
 
       const projectName = document.createElement("div");
       projectName.className = "techtools";
-
       projectName.style.position = "absolute";
       projectName.style.top = "4%";
       projectName.style.left = "5%";
@@ -245,6 +235,7 @@
       projectName.style.height = "50px";
       projectName.textContent = "AlertnessMap";
       projectName.style.fontSize = "30px";
+
       main_box.appendChild(projectName);
       
   }
