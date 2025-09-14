@@ -31,7 +31,7 @@ html,body{
   margin-left: 35%;
   width: 300px;   /* use px instead of % for better control */
   height: 300px;
-  border: 3px solid black;
+  border: 3px solid #D4C9BE;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -40,6 +40,8 @@ html,body{
   align-items: center;
   justify-content: center;
   padding: 20px;
+  
+  background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwbWRggNf8BaX7HUyriYbCRsS5VkM7L6gdWhGO4TE-6XCcfNlt0vmFKuMYHz3OxWFJcBo&usqp=CAU") ;
 }
 button{
   color: aqua;
