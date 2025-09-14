@@ -8,10 +8,10 @@ html,body{
 }
 #profile{
   position: absolute;  
-  top: 3%;
+  top: 1%;
  
-  margin-left: 7%;
-  border: 1px solid #333333;
+  margin-left: 2%;
+  border: 1px solid #708993;
   height: 30%;
   width: 25%;
 
@@ -27,28 +27,31 @@ html,body{
 }
 #brief{
  position: absolute;  
-  top: 5%;
+  top: 2%;
   margin-left: 30%;
   width: 300px;   /* use px instead of % for better control */
   height: 300px;
   
-  background-image: url("ChatGPT\ Image\ Aug\ 29\,\ 2025\,\ 08_45_49\ PM.png"); /* 👈 add your image here */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-
+  border-radius: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
 }
-
+button{
+  color: aqua;
+  background-color:#19183B;
+}
 
 #brief p{  
-  font-size: 15px;
+  font-size: 23px;
   line-height: 1.4;
   word-wrap: break-word;
   margin: 0;
+  color: black;
   
 }
 
@@ -174,13 +177,16 @@ html,body{
 
 .topnav {
   overflow: hidden;
-
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   background-color: #19183B;
 }
 
 .topnav a {
   float: left;
-  color: #A1C2BD;
+  color: aqua;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -193,5 +199,5 @@ html,body{
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
-  color: white;}
+  background-color: #708993;
+  background-color: #19183B;}
