@@ -20,7 +20,7 @@ html,body{
   height: 200vh;
   width: 100%;
   border: #555;
-  background-color: palevioletred;
+  background-color: #708993;
   text-align: center;
   position: absolute;
   
@@ -171,3 +171,27 @@ html,body{
  .firstproject {
   object-fit: fill;
 }
+
+.topnav {
+  overflow: hidden;
+
+  background-color: #19183B;
+}
+
+.topnav a {
+  float: left;
+  color: #A1C2BD;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;}
