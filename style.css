@@ -1,14 +1,18 @@
-html,body{
+html{
+  overflow-y: scroll; 
+  height: 300%;
+}
+body{
   margin: 0;
   padding: 0;
-  height: 100%;
-  /* overflow-y: auto; */
+    
+  background-color: rgb(247, 242, 242);
+
   
 
 }
 #profile{
-  position: absolute;  
-  top: 5%;
+  top: 9%;
   margin-left: 5%;
   border: 1px solid #708993;
   height: 30%;
@@ -23,39 +27,25 @@ img{
 }
 #Summary{
   border: 2px solid black;
-  position: absolute;
   left:55%;
   top: 9%;
 
 
 }
-#box {
+/* #box {
   height: 200vh;
   width: 100%;
   border: #555;
+  border: 2px solid yellowgreen;
   background-color: #F1EFEC;
   text-align: center;
   position: absolute;
   border: 3px solid green;
   
-}
-#brief{
- position: absolute;  
-  top: 8%;
-  margin-left: 35%;
-  width: 300px;   /* use px instead of % for better control */
-  height: 300px;
-  border: 3px solid #D4C9BE;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  /* background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwbWRggNf8BaX7HUyriYbCRsS5VkM7L6gdWhGO4TE-6XCcfNlt0vmFKuMYHz3OxWFJcBo&usqp=CAU") ; */
-}
+} */
+ 
+
+
 button{
   color: aqua;
   background-color:#19183B;
@@ -73,8 +63,8 @@ button{
 
 #personalprojects{
   position: relative;  
-  top: 58%;
-  margin-left: 35%;
+  bottom: 0;
+  margin-left: 57%;
   border: 4px solid pink;
   height: 19%;
   width: 35%;
@@ -85,7 +75,7 @@ button{
   /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoqMQm4KuOCUn2pV2AOHEBPUxLMXzrLN7eCg&s'); */
 }
 .alert-navigation{
-    position: absolute;
+  
     border: 2px solid  black;
     height: 50%;
     width: 20%;
@@ -93,7 +83,7 @@ button{
 
 }
 .mastende{
-    position: absolute;
+    
     border: 2px solid  black;
     height: 51%;
     width: 20%;
@@ -101,7 +91,7 @@ button{
 
 }
 .firstproject{
-    position: absolute;
+    
     border: 2px solid  black;
     height: 50%;
     width: 20%;
@@ -111,7 +101,7 @@ button{
 }
 .details{
     margin-top: 20px;
-    position: absolute;
+    
     margin-left: 7%;
     width: 70%;
     height: 16%;
@@ -136,27 +126,22 @@ button{
     margin-left:1%; 
     left: 0; 
     top: 0; 
-    position: absolute
+    
 }
 #socialMedia{
     margin-left:35%; 
     left: 0; 
     top: 0; 
-    position: absolute
     
-    
-
 }
 #achievements{
     margin-left:70%; 
     left: 0; 
     top: 0; 
-    position: absolute
+    
 
 }
 .proof{
-   
-   position: absolute;
    margin-right: 1px;
    width: 15%;
    height: 20%;
