@@ -15,6 +15,20 @@ html,body{
   width: 25%;
 
 }
+img{
+  height: 35rem;
+  width: 35rem;
+
+
+}
+#Summary{
+  border: 2px solid black;
+  position: absolute;
+  left:55%;
+  top: 9%;
+
+
+}
 #box {
   height: 200vh;
   width: 100%;
@@ -40,8 +54,7 @@ html,body{
   align-items: center;
   justify-content: center;
   padding: 20px;
-  
-  background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwbWRggNf8BaX7HUyriYbCRsS5VkM7L6gdWhGO4TE-6XCcfNlt0vmFKuMYHz3OxWFJcBo&usqp=CAU") ;
+  /* background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwbWRggNf8BaX7HUyriYbCRsS5VkM7L6gdWhGO4TE-6XCcfNlt0vmFKuMYHz3OxWFJcBo&usqp=CAU") ; */
 }
 button{
   color: aqua;
