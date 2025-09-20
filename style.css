@@ -92,7 +92,8 @@ padding: 30px;
 font-size: 2rem;
 align-self: flex-start ;
 flex-shrink: 0;
-
+border: 2px solid salmon;
+margin-top: 1%;
 }
 
 
@@ -108,6 +109,9 @@ button{
   word-wrap: break-word;
   margin: 0;
   color: black;
+  
+}
+.tools{
   
 }
 
