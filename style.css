@@ -36,8 +36,8 @@ body{
 
 }
 .profile img{
-  width: 100px;  /* Or whatever */
-  height: 100px; /* Or whatever */
+  width: 100%;  /* Or whatever */
+  height: auto; /* Or whatever */
   margin: auto;
    border: 2px solid black;
   object-fit: fill;
@@ -45,7 +45,7 @@ body{
   margin-left: 0;
   height:500px;
   width: 500px; 
-  border-radius: 50% ;
+
 
 }
 #Summary{
@@ -82,7 +82,14 @@ img{
 
 
 
-
+.tools{
+  background: #eee;
+  color: #191919;
+  font-family: 'Lato', sans-serif;
+  text-align: left;
+  padding: 10px;
+  
+}
 .brief
 {
 
