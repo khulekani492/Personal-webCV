@@ -4,25 +4,44 @@ html{
 }
 body{
   margin: 0;
-  padding: 0;
-    
+  padding: 0;    
   background-color: rgb(247, 242, 242);
 
   
 
 }
+.mainBox{
+  display: flex;
+  gap: 10px;
+  gap: 10px 20px; /* row-gap column gap */
+  row-gap: 10px;
+  column-gap: 20px;
+  align-items: center;
+  
+}
+
 #profile{
   top: 9%;
-  margin-left: 5%;
+  margin-left: 7%;
   border: 1px solid #708993;
   height: 30%;
   width: 25%;
+  border: 2px solid black;
+
+  
 
 }
-img{
-  height: 35rem;
-  width: 35rem;
-
+.profile img{
+     width: 100px;  /* Or whatever */
+  height: 100px; /* Or whatever */
+  margin: auto;
+   border: 2px solid black;
+  object-fit: fill;
+  margin-top: 5%;
+  margin-left: 0;
+  height:500px;
+  width: 500px; 
+  border-radius: 50% ;
 
 }
 #Summary{
@@ -33,7 +52,7 @@ img{
 
 }
 /* #box {
-  height: 200vh;
+  height: 200vh;https://css-tricks.com/snippets/css/a-guide-to-flexbox/
   width: 100%;
   border: #555;
   border: 2px solid yellowgreen;
@@ -44,7 +63,15 @@ img{
   
 } */
  
+.brief
+{
+border: 2px solid gold;
+margin-right: 3%;
+margin-top: 10%;
+padding: 30px;
+font-size: 2rem;
 
+}
 
 button{
   color: aqua;
