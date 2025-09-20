@@ -18,6 +18,8 @@ body{
   row-gap: 10px;
   column-gap: 20px;
   align-items: start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
   
   
 }
@@ -34,7 +36,7 @@ body{
 
 }
 .profile img{
-     width: 100px;  /* Or whatever */
+  width: 100px;  /* Or whatever */
   height: 100px; /* Or whatever */
   margin: auto;
    border: 2px solid black;
@@ -58,16 +60,21 @@ body{
 } */
  
 .edubackground{
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-
+  display: flex;  
+  gap: 10px;
+  gap: 10px 20px; /* row-gap column gap */
+  row-gap: 10px;
+  column-gap: 20px;
 }
-.edubackground img{
-  bottom: 0;
-  width: 600px;
+img{
+  top: 0;
+  width: 500px;
   height: 600px;
 }
+
+
+
+
 .brief
 {
 
