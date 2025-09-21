@@ -113,7 +113,13 @@ img{
   font-size: 30px;
 }
 
-
+.projectContainer{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  font-size: 2rem;
+  padding: 3%;
+}
 
 .tools{
   background: #eee;
