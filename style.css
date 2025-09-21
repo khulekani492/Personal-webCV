@@ -24,6 +24,27 @@ body{
   
 }
 
+.selfLearning{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 40px;
+  padding: 6%;
+
+}
+.selfLearning img{
+  width: 1000px;
+  height: 500px;
+}
+.selfLearning{
+    font-size: 23px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  margin: 0;
+  color: black;
+}
+
 #profile{
   top: 9%;
   margin-left: 7%;
