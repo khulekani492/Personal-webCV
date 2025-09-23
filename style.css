@@ -300,6 +300,11 @@ h3{
   background-color:#c8e2ff ;
   
 }
+.characteristics{
+  display: flex;
+  
+  gap:20px;
+}
 
 .topnav a {
   float: left;
