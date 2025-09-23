@@ -52,13 +52,9 @@ width: 900px;
 #profile{
   top: 9%;
   margin-left: 7%;
-  
   height: 30%;
   width: 25%;
   
-
-  
-
 }
 .profile img{
   width: 100%;  /* Or whatever */
@@ -67,9 +63,10 @@ width: 900px;
   object-fit: fill;
   margin-top: 5%;
   margin-left: 0;
-  height:500px;
-  width: 500px; 
-
+  height:400px;
+  width: 300px;
+  border-radius: 50%;  
+  
 
 }
 #Summary{
@@ -298,8 +295,9 @@ h3{
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; 
-  background-color:#347cd3 ;
+  z-index: 1000;
+  left: 20%;
+  background-color:#3e86dd ;
   
 }
 
@@ -307,7 +305,7 @@ h3{
   float: left;
   color:#09122C;
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px ;
   text-decoration: none;
   font-size: 17px;
 }
@@ -318,6 +316,6 @@ h3{
 }
 
 .topnav a.active {
-  background-color: #FDF4E3;
+  background-color: #ffffffd2;
   color:#000;
 }
