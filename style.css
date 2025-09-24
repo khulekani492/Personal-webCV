@@ -215,9 +215,13 @@ border-radius: 50%;
 .academic{
  font-family: 'Lato', sans-serif;
 padding-right: 2%; 
+background-color: #9acaf1;
+border-radius: 50%;
 
 }
-
+.academic h1{
+  color: #FFF9AF;
+}
 .alert-navigation{
   
     border: 2px solid  black;
