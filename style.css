@@ -136,8 +136,34 @@ img{
   font-family: 'Lato', sans-serif;
   text-align: left;
   padding: 40px;
-  
+  background-image: url("https://cdn.pixabay.com/photo/2016/09/16/09/30/lock-1673604_640.jpg");
+  background-size: auto;
 }
+
+ul{
+  color: white;
+}
+.tools h1{
+  color: white;
+  font-size: 50px;
+}
+a:link {
+  color: black;   /* normal state */
+}
+
+a:visited {
+  color: white;    /* after user clicks */
+}
+
+a:hover {
+  color: red;     /* when mouse hovers */
+  text-decoration: underline;
+}
+
+a:active {
+  color: orange;  /* when being clicked */
+}
+
 
 .brief
 {
