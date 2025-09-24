@@ -1,6 +1,6 @@
 html{
   overflow-y: scroll; 
-  height: 300%;
+  height: 200%;
 }
 body{
   margin: 0;
@@ -164,7 +164,12 @@ a:active {
   color: orange;  /* when being clicked */
 }
 
-
+.frontendskills{
+  background-image: url("https://cdn.pixabay.com/photo/2022/07/08/05/38/freelance-work-7308505_640.png");
+}
+.frontendskills h1{
+  color: #FFF9AF;
+}
 .brief
 {
 
@@ -198,12 +203,14 @@ flex-wrap: nowrap;
 font-family: 'Lato', sans-serif;
 gap: 130px; 
 padding: 2%;
-background-color: #fff;
+background-color: #84b4db;
 }
 .frontendskills{
 font-family: 'Lato', sans-serif;
 padding-right: 2%;
 background-color: white;
+padding: 90px;
+border-radius: 50%;
 }
 .academic{
  font-family: 'Lato', sans-serif;
@@ -323,7 +330,7 @@ h3{
   width: 100%;
   z-index: 1000;
   left: 20%;
-  background-color:#c8e2ff ;
+  background-color:#84b4db ;
   
 }
 .characteristics{
