@@ -92,9 +92,30 @@ height: 900px;
   margin-top: 5%;
   flex-shrink: 0;
   flex-wrap: nowrap;
-  border: 2px solid;
   padding: 2%;
   
+} 
+.schoolSummary{
+  background-image: url("https://www.payspace.com/wp-content/uploads/2016/02/seo-wethinkcode.png");
+background-repeat: no-repeat;
+background-size: cover;   /* stretch to fill div */
+  background-position: center
+
+}
+.schoolSummary p {
+  color: white;
+}
+.schoolSummary h1{
+  color: #fff;
+}
+.schoolSummary h2{
+  color: #fff;
+}
+.schoolSummary table{
+  color: #fff;
+}
+.schoolSummary a{
+  color: #FFF9AF;
 }
 .Mentors{
   margin-top: 0;
