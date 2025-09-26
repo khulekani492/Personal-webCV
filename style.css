@@ -95,6 +95,15 @@ height: 900px;
   padding: 2%;
   
 } 
+.morelife{
+  margin-top: 0;
+  margin-left: 0;
+}
+.morelifeWelcome{
+  margin-top: 8%;
+  margin-left: 25%
+
+}
 .schoolSummary{
   background-image: url("https://www.payspace.com/wp-content/uploads/2016/02/seo-wethinkcode.png");
 background-repeat: no-repeat;
