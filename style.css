@@ -86,10 +86,10 @@ height: 900px;
 .edubackground{
   display: flex;  
   gap: 10px;
-  gap: 10px 20px; /* row-gap column gap */
+
   row-gap: 10px;
   column-gap: 20px;
-  margin-top: 5%;
+  margin-top: 9%;
   flex-shrink: 0;
   flex-wrap: nowrap;
   padding: 2%;
@@ -99,8 +99,15 @@ height: 900px;
   background-image: url("https://www.payspace.com/wp-content/uploads/2016/02/seo-wethinkcode.png");
 background-repeat: no-repeat;
 background-size: cover;   /* stretch to fill div */
-  background-position: center
-
+background-position: center;
+  
+}
+.myIMG{ 
+    background-image: url("bootCamp.jpeg");
+background-repeat: no-repeat;
+background-size: cover;   /* stretch to fill div */
+background-position: center;
+width: 190%;
 }
 .schoolSummary p {
   color: white;
