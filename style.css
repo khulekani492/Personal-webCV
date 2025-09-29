@@ -111,28 +111,7 @@ background-size: cover;   /* stretch to fill div */
 background-position: center;
   
 }
-.myIMG{ 
-    background-image: url("bootCamp.jpeg");
-background-repeat: no-repeat;
-background-size: cover;   /* stretch to fill div */
-background-position: center;
-width: 190%;
-}
-.schoolSummary p {
-  color: white;
-}
-.schoolSummary h1{
-  color: #fff;
-}
-.schoolSummary h2{
-  color: #fff;
-}
-.schoolSummary table{
-  color: #fff;
-}
-.schoolSummary a{
-  color: #FFF9AF;
-}
+
 .Mentors{
   margin-top: 0;
 }
