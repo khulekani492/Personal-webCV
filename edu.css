@@ -32,13 +32,15 @@ body{
 
   row-gap: 10px;
   column-gap: 10px;
-  margin-top: 60%;
+  margin-top: 10%;
   flex-shrink: 0;
   flex-wrap: nowrap;
   padding: 2%;
   
 } 
-
+.late-study img{
+  width: 500px;
+}
 .morelife{
   margin-top: 9%;
   margin-left: 0;
