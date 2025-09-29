@@ -61,8 +61,8 @@ border: 2px solid green;
 position: absolute;
 margin-left:20% ;
 padding: 10px;
-height: 500px;
-width: 500px;
+height: 600px;
+width: 700px;
   
 }
 
@@ -81,7 +81,6 @@ width: 500px;
 .schoolSummary a{
   color: #FFF9AF;
 }
-
 .Mentors{
   margin-top: 0;
 }
