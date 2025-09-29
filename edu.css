@@ -26,7 +26,8 @@ body{
   background-color: #ffffffd2;
   color:#000;
 }
-        .edubackground{
+
+.edubackground{
   display: flex;  
   gap: 10px;
 
@@ -43,7 +44,7 @@ body{
 }
 .morelife{
   margin-top: 9%;
-  margin-left: 0;
+  margin-left: 5%;
   border: 2px solid #fff;
 }
 .morelifeWelcome{
@@ -102,13 +103,12 @@ background-position: center;
 
 }
 
-.selfLean p{
-  color: red;
-}
+
 .selfLearning img{
 width: 900px;
 height: 900px;
 }
+
 .schoolSummary{
   font-family: 'Lato', sans-serif;
   text-align: left;
@@ -140,7 +140,7 @@ height: 900px;
   top: 0;
   width: 100%;
   z-index: 1000;
-  left: 2%;
+  left: 20%;
   background-color:#84b4db ;
   
 }
