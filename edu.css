@@ -40,20 +40,25 @@ body{
 } 
 
 .morelife{
-  margin-top: 0;
+  margin-top: 6%;
   margin-left: 0;
+  border: 2px solid yellow;
 }
 .morelifeWelcome{
   margin-top: 8%;
-  margin-left: 25%
+  margin-left: 25%;
+  border: 2px solid yellow ;
   
 
 }
 .schoolSummary{
-  background-image: url("https://www.payspace.com/wp-content/uploads/2016/02/seo-wethinkcode.png");
+background-image: url("https://www.payspace.com/wp-content/uploads/2016/02/seo-wethinkcode.png");
 background-repeat: no-repeat;
 background-size: cover;   /* stretch to fill div */
 background-position: center;
+border: 2px solid green;
+position: absolute;
+margin-left:2% ;
   
 }
 .myIMG{ 
@@ -100,6 +105,8 @@ height: 900px;
   font-family: 'Lato', sans-serif;
   text-align: left;
   padding: 20px;
+  margin-left: 10%;
+  margin-top: 6%;
 }
 .selfLearning{
   font-size: 23px;
@@ -111,5 +118,15 @@ height: 900px;
 }
 .flex-schoolSummary{
     display: flex;
-    gap: 2px;
+    gap: 1px;
+}
+.topnav {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  left: 2%;
+  background-color:#84b4db ;
+  
 }
