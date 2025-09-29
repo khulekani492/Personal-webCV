@@ -109,3 +109,7 @@ height: 900px;
   color: black;
   padding: 2%;
 }
+.flex-schoolSummary{
+    display: flex;
+    gap: 2px;
+}
