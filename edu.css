@@ -1,0 +1,111 @@
+html{
+  overflow-y: scroll; 
+  height: 200%;
+}
+body{
+  margin: 0;
+  padding: 0;    
+  background-color: rgb(247, 242, 242);
+
+}
+.topnav a {
+  float: left;
+  color:#09122C;
+  text-align: center;
+  padding: 20px ;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+ 
+  color: whitesmoke;
+}
+
+.topnav a.active {
+  background-color: #ffffffd2;
+  color:#000;
+}
+        .edubackground{
+  display: flex;  
+  gap: 10px;
+
+  row-gap: 10px;
+  column-gap: 20px;
+  margin-top: 9%;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+  padding: 2%;
+  
+} 
+
+.morelife{
+  margin-top: 0;
+  margin-left: 0;
+}
+.morelifeWelcome{
+  margin-top: 8%;
+  margin-left: 25%
+  
+
+}
+.schoolSummary{
+  background-image: url("https://www.payspace.com/wp-content/uploads/2016/02/seo-wethinkcode.png");
+background-repeat: no-repeat;
+background-size: cover;   /* stretch to fill div */
+background-position: center;
+  
+}
+.myIMG{ 
+    background-image: url("bootCamp.jpeg");
+background-repeat: no-repeat;
+background-size: cover;   /* stretch to fill div */
+background-position: center;
+width: 190%;
+}
+.schoolSummary p {
+  color: white;
+}
+.schoolSummary h1{
+  color: #fff;
+}
+.schoolSummary h2{
+  color: #fff;
+}
+.schoolSummary table{
+  color: #fff;
+}
+.schoolSummary a{
+  color: #FFF9AF;
+}
+
+.Mentors{
+  margin-top: 0;
+}
+
+.selfLearning{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 20px 20px;
+  padding: 5%;
+  border: 2px solid yellow;
+
+}
+.selfLearning img{
+width: 900px;
+height: 900px;
+}
+.schoolSummary{
+  font-family: 'Lato', sans-serif;
+  text-align: left;
+  padding: 20px;
+}
+.selfLearning{
+  font-size: 23px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  margin: 0;
+  color: black;
+  padding: 2%;
+}
