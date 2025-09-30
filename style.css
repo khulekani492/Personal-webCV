@@ -159,6 +159,15 @@ img{
   background-position: center;
 }
 
+.tools1{
+  margin-top: 5%;
+  background: white;
+  background-image: url("https://cdn.pixabay.com/photo/2022/07/08/05/38/freelance-work-7308505_640.png");
+  padding:40px;
+   font-family: 'Lato', sans-serif;
+  text-align: left;
+}
+
 .tools ul{
   color: white;
 }
