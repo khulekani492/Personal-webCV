@@ -12,7 +12,7 @@ body{
 
 }
 .mainBox{
-  margin-top: 5%;
+  margin-top: 2%;
   display: flex;
   gap: 10px;
   gap: 10px 20px; /* row-gap column gap */
@@ -164,8 +164,24 @@ img{
   background: white;
   background-image: url("https://cdn.pixabay.com/photo/2022/07/08/05/38/freelance-work-7308505_640.png");
   padding:40px;
-   font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
   text-align: left;
+  height: 100px;
+  width: 199px;
+  border-radius: 50%;
+
+}
+
+.tools2{
+  margin-top: 5%;
+  background: white;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4dIskoiIgdgaOEdujrLdGdBZEX2wta8sung&s");
+  padding:40px;
+  height: 100px;
+  width: 199px;
+  font-family: 'Lato', sans-serif;
+  text-align: left;
+  border-radius: 50%;
 }
 
 .tools ul{
