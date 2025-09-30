@@ -146,6 +146,17 @@ img{
   margin-left:3% ;
 
 }
+
+.tools-flex{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  margin-left: 27%;
+}
+.tools h1{
+  color: red;
+  
+}
 .tools{
   background: #fff;
   color: #191919;
@@ -157,31 +168,36 @@ img{
   background-repeat: no-repeat;
   background-size: cover;   /* stretch to fill div */
   background-position: center;
+    
 }
 
 .tools1{
-  margin-top: 5%;
+  
   background: white;
   background-image: url("https://cdn.pixabay.com/photo/2022/07/08/05/38/freelance-work-7308505_640.png");
   padding:40px;
   font-family: 'Lato', sans-serif;
-  text-align: left;
-  height: 100px;
-  width: 199px;
-  border-radius: 50%;
-
+  
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-size: cover;   /* stretch to fill div */
+  background-position: center;
+  
 }
 
 .tools2{
-  margin-top: 5%;
+  
   background: white;
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4dIskoiIgdgaOEdujrLdGdBZEX2wta8sung&s");
   padding:40px;
-  height: 100px;
-  width: 199px;
   font-family: 'Lato', sans-serif;
-  text-align: left;
-  border-radius: 50%;
+  text-align: bottom;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-size: cover;   /* stretch to fill div */
+  background-position: center;
+  vertical-align: bottom;
+  
 }
 
 .tools ul{
