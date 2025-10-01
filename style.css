@@ -170,7 +170,7 @@ img{
   background-image: url("https://cdn.pixabay.com/photo/2016/09/16/09/30/lock-1673604_640.jpg");
   background-size: auto;
   background-repeat: no-repeat;
-  background-size: cover;   /* stretch to fill div */
+  background-size: cover;   /* stretch to fill divdd*/
   background-position: center;
     
 }
