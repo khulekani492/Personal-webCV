@@ -1,0 +1,99 @@
+html{
+  overflow-y: scroll; 
+  height: 102%;
+}
+body{
+  margin: 0;
+  padding: 0;    
+  background-color: rgb(247, 242, 242);
+  
+
+  
+
+}
+.mainBox{
+  margin-top:5%;
+  display: flex;
+  gap: 10px;
+  gap: 10px 20px; /* row-gap column gap */
+  row-gap: 10px;
+  column-gap: 20px;
+  align-items: start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  padding: 3%;
+  height: 30%;
+  
+}
+.brief
+{
+
+margin-right: 3%;
+margin-top: 16%;
+font-size: 2rem;
+align-self: flex-start ;
+flex-shrink: 1px;
+
+margin-top: 1%;
+}
+
+
+button{
+  color: aqua;
+  background-color:#19183B;
+}
+
+#brief p{  
+  
+  font-size: 23px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  margin: 0;
+  color: black;
+  
+}
+.profile{
+  top: 9%;
+  margin-left: 4%;
+  height: 30%;
+  width: 25%;
+}
+.profile img{
+  width: 100%;  /* Or whatever */
+  height: auto; /* Or whatever */
+  margin: auto; 
+  object-fit: fill;
+  margin-top: 5%;
+  margin-left: 0;
+  height:300px;
+  width: 300px;
+  
+}
+.topnav {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  left: 0;
+  background-color:#84b4db ;
+  
+}
+.topnav a {
+  float: left;
+  color:#09122C;
+  text-align: center;
+  padding: 20px ;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+ 
+  color: whitesmoke;
+}
+
+.topnav a.active {
+  background-color: #ffffffd2;
+  color:#000;
+}
