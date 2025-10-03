@@ -22,7 +22,6 @@ body{
   justify-content: flex-start;
   flex-wrap: nowrap;
   padding: 3%;
-  
   height: 30%;
   
 }
@@ -67,9 +66,9 @@ height: 900px;
   object-fit: fill;
   margin-top: 5%;
   margin-left: 0;
-  height:300px;
-  width: 300px;
-  border-radius: 50%;  
+  height:500px;
+  width: 500px;
+  
 }
 #Summary{
   border: 2px solid black;
@@ -147,7 +146,7 @@ img{
 
 .tools-flex{
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 30px;
   margin-left: 100px;
   
@@ -197,7 +196,7 @@ img{
 }
 
 .tools3{
-  background: white;
+  background: rgb(195, 226, 84);
   padding:0px;
   border-radius: 50%;
   padding:20px;
