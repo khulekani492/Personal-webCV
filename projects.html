@@ -1,89 +1,385 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Projects</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-     <div class="topnav">
-  <a href="index.html">HOME</a>
-  <a href="education.html">EDUCATION</a>
-  <a  href="contact.html">CONTACT</a>
-  <a class="active" href="projects.html">PROJECTS</a>
-    <img style="position: absolute; width: 200px; height: 200px;"
-  src="https://cdn.pixabay.com/photo/2017/08/25/13/36/code-geek-2680204_640.png" 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Khulekani Zondo</title>
 
-  alt="AI icon"
-/>   
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --bg2: #141414;
+      --bg3: #1c1c1c;
+      --border: rgba(255,255,255,0.08);
+      --accent: #c8f04d;
+      --accent2: #f0d060;
+      --text: #f0ede6;
+      --muted: #888;
+      --card-radius: 16px;
+      --font-display: 'DM Serif Display', serif;
+      --font-body: 'Syne', sans-serif;
+      --font-mono: 'DM Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.7;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2.5rem;
+      background: rgba(13,13,13,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 0.5px solid var(--border);
+      z-index: 100;
+    }
+
+    .nav-logo {
+      font-family: var(--font-mono);
+      color: var(--accent);
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a.active { color: var(--accent); }
+    .nav-links a:hover { color: var(--text); }
+
+    .page {
+      padding: 96px 5vw 80px;
+    }
+
+    .projects-section {
+      margin-bottom: 60px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-num {
+      font-family: var(--font-mono);
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      color: var(--text);
+    }
+
+    .section-line {
+      flex: 1;
+      height: 0.5px;
+      background: var(--border);
+      margin-left: 0.5rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--bg2);
+      border: 0.5px solid var(--border);
+      border-radius: var(--card-radius);
+      padding: 2rem;
+      transition: transform 0.2s, border-color 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .card h3 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+
+    .mono {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1.25rem;
+      background: var(--bg3);
+    }
+
+    .btn-link {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent2);
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--accent2);
+      padding-bottom: 1px;
+      letter-spacing: 0.06em;
+      margin-top: auto;
+      transition: opacity 0.2s;
+    }
+
+    .btn-link:hover { opacity: 0.7; }
+
+    .early-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    details {
+      background: var(--bg2);
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      transition: border-color 0.2s;
+    }
+
+    details:hover { border-color: rgba(255,255,255,0.15); }
+    details[open] { border-color: rgba(200,240,77,0.25); }
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    summary::before {
+      content: '+';
+      font-family: var(--font-mono);
+      font-size: 14px;
+      color: var(--accent);
+      width: 18px;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+
+    details[open] summary::before { content: '−'; }
+
+    .details-body {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 0.5px solid var(--border);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 0.75rem;
+    }
+
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--muted);
+      border: 0.5px solid var(--border);
+      border-radius: 99px;
+      padding: 3px 10px;
+      letter-spacing: 0.06em;
+    }
+
+    .details-body p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    footer {
+      border-top: 0.5px solid var(--border);
+      padding: 2.5rem 5vw;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    footer p {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 1.5rem; }
+      .nav-links { gap: 1.2rem; }
+      .page { padding: 88px 1.5rem 60px; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">KZ_dev</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a class="active" href="#">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <div class="projects-section">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="card">
+        <h3>AlertnessMap</h3>
+        <div class="mono">Safety Navigation System</div>
+        <img src="alertnessMap.png" alt="AlertnessMap screenshot" />
+        <p>
+          A navigation tool designed to improve driver safety by identifying
+          hijacking hotspots and helping users make safer travel decisions.
+        </p>
+        <a href="https://github.com/khulekani492/PROMAN--Rent-property-management" class="btn-link">→ Available on github</a>
+      </div>
+
+      <div class="card">
+        <h3>Property Management</h3>
+        <div class="mono">Property Management System</div>
+        <img src="PROMAN.png" alt="Property Management screenshot" />
+        <p>
+          A landlord-focused application for tracking rental income,
+          tenant payments, and overall financial health of properties.
+        </p>
+        <a href="https://github.com/khulekani492/alertnessMap" class="btn-link">→ Available on github</a>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="projects-section">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Early Projects</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="early-grid">
+
+      <details>
+        <summary>Music Bar Chart</summary>
+        <div class="details-body">
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">Turtle Graphics</span>
+          </div>
+          <p>
+            Generates a bar chart based on user input of artists and songs.
+            &nbsp;<a href="https://github.com/khulekani492/First-project" class="btn-link" target="_blank">→ GitHub</a>
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Isigungu (UNO Variant)</summary>
+        <div class="details-body">
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">Tkinter GUI</span>
+          </div>
+          <p>
+            A digital version of a South African card game similar to UNO.
+            &nbsp;<a href="https://github.com/khulekani492/isigungu" class="btn-link" target="_blank">→ GitHub</a>
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Basic Website</summary>
+        <div class="details-body">
+          <div class="tag-row">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <p>
+            A simple music upload web app.
+            &nbsp;<a href="https://github.com/khulekani492/basic-website" class="btn-link" target="_blank">→ GitHub</a>
+          </p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+
 </div>
- <br><br>
-<div class="projectContainer"> 
-        <div class="alertnessMap">
-             <h1>alertnessMap</h1>
-      <p>AlertnessMap is a navigation application designed to enhance driver safety<br> by highlighting known hijacking hotspots along the route<br>helping drivers make more informed and cautious travel decisions.
-    <br>
-    <img src="alertnessMap.png">
-    <br><a href="#">CLICK HERE!! Full Documentation</a></p>
-        </div>
-       <div class="Mastende">
-             <h1>Mastende</h1> 
-                <h3>Landlord property management application </h3>
-      <p>The overall goal of this application is to keep track of the landlord’s rental property financial health.<br>
-track each tenant’s monthly payments, store that information, and display it for the landlord.<br><br><a href="#">CLICK HERE!! Full Documentation</a></p>
-        </div>
-        
-      </div>  
-        <div class="minorproject">
-             <h1>Games AND FUN Projects</h1> 
-                <h3>Early Github project that broke the coding wall for me</h3>
-                <h3>Music Barchart #First project on github</h3>
-                  <details>
-                    <summary>
-                        Description
-                    </summary>
-                    
-                       <h3>Techstack</h3>
-                        <ul>
-                            <li>Python</li>
-                            <li>turtle module for graphics</li>
-            </ul>
-              <p>Prompt the user to enter an artist's name along with their songs.<br>
-                   When finished, type 'quit' and a bar chart will be generated.<br>
-                    The x-axis will display the artist names, and the y-axis will show the number of songs per artist.
-                   <br>Link: <a href="https://github.com/khulekani492/First-project">github link</a>
-                </p>                  
-            </details>                       
-         <h3>Isigungu #South African Uno</h3>
-         <details>
-            <summary>
-                   Description
-            </summary>
-            <h3>Techstack</h3>
-            <ul>
-                <li>Python</li>
-                <li>Tkinter for Graphical userInterface</li>
-            </ul>
-                Childhood card game similar to UNO<br>
-                Link: <a href="https://github.com/khulekani492/isigungu">github link</a>
-            </p>
 
-         </details>
-              <h3>basic_website</h3>
-         <details>
-            <summary>
-                   Description
-            </summary>
-            <h3>Techstack</h3>
-            <ul>
-                <li>html</li>
-                <li>css</li>
-                <li>JavaScript</li>
-            </ul>
-                A web application that uploads music from your computer and uploads it<br>
-                Link: <a href="https://github.com/khulekani492/basic-website">github link</a>
-            </p>
-         </details>  
-        </div>
-    </body>
+<footer>
+  <p>© 2024 <a href="index.html">Khulekani Zondo</a> · Fullstack Developer · South Africa</p>
+  <p>Built with HTML · CSS · #caffeine</p>
+</footer>
 
+</body>
 </html>

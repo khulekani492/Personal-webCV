@@ -1,100 +1,558 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Education </title>
-         <link rel="stylesheet" href="edu.css">
-    </head>
-    <body>
-           <div class="topnav">
-  <a href="index.html">HOME</a>
-  <a class="active"  href="wethinkcode.html">EDUCATION</a>
-  <a href="contact.html">CONTACT</a>
-  <a href="projects.html">PROJECTS</a>
-  <img style="position: absolute; width: 200px; height: 200px;"
-  src="https://cdn.pixabay.com/photo/2017/08/25/13/36/code-geek-2680204_640.png" 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Education — Khulekani Zondo</title>
 
-  alt="AI icon"
-/>   
-</div>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700&display=swap" rel="stylesheet" />
 
-<div class="flex-schoolSummary">
- <div class="imageyeskolo"> <img  style="width: 500px ; height: 549px;" src="bootCamp.jpeg"> <p>
-  <strong>31 July 2024</strong><br>
-  Final day of the <em>WeThinkCode_</em> bootcamp second application exam week. <br>
-  During this week, I participated in a series of competitive coding assessments<br> 
-  to secure a spot in the program. <br>
-  <em>Fun fact:</em> On this very day, I was originally scheduled to write my 
-  final exam<br>at the University of KwaZulu-Natal<br> —a turning point that 
-  marked my shift towards pursuing software development<br> full-time.
-</p>
- </div>
- 
-  <div class="schoolSummary">
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --bg2: #141414;
+      --bg3: #1c1c1c;
+      --border: rgba(255,255,255,0.08);
+      --accent: #c8f04d;
+      --accent2: #f0d060;
+      --text: #f0ede6;
+      --muted: #888;
+      --card-radius: 16px;
+      --font-display: 'DM Serif Display', serif;
+      --font-body: 'Syne', sans-serif;
+      --font-mono: 'DM Mono', monospace;
+    }
 
- <div class="morelifeWelcome"><h1>WeThinkCode_</h1><h1></h1>
-        <h2>About Wethinkcode_</h2>
-            <p> ''WeThinkCode_ is a South African software development academy tackling the technical skills shortage and youth unemployment.<br> 
-              We recruit talented youth, providing specialized training to turn them into proficient backend developers in 16 months''<br>
-              <a href="https://wethinkcode.co.za/">for more info</a>
-          </p>  
-           <h1>Academic Report</h1>
-<p>
-  <a href="Khulekani_Zondo_Y1_Report-2.pdf" target="_blank">
-    Click here to view my First-Year Academic Report
-  </a>    
-        <h2>Background Education</h2>
-<p>
-  Bachelor of Arts (BA) in Cultural Heritage and Tourism,  
-  University of KwaZulu-Natal
-</div>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2.5rem;
+      background: rgba(13,13,13,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 0.5px solid var(--border);
+      z-index: 100;
+    }
+
+    .nav-logo {
+      font-family: var(--font-mono);
+      color: var(--accent);
+      font-size: 13px;
+      text-decoration: none;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a.active { color: var(--accent); }
+    .nav-links a:hover { color: var(--text); }
+
+    /* PAGE */
+    .page {
+      padding: 96px 5vw 80px;
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      padding: 48px 0 56px;
+      position: relative;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: -100px; left: -10vw;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(200,240,77,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .page-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      border: 0.5px solid var(--accent);
+      padding: 4px 12px;
+      border-radius: 99px;
+      margin-bottom: 1.25rem;
+      text-transform: uppercase;
+    }
+
+    .page-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.08;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+
+    .page-header h1 em {
+      font-style: italic;
+      color: var(--accent2);
+    }
+
+    .page-header p {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    /* SECTION */
+    .edu-section {
+      margin-bottom: 72px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-num {
+      font-family: var(--font-mono);
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--text);
+    }
+
+    .section-line {
+      flex: 1;
+      height: 0.5px;
+      background: var(--border);
+      margin-left: 0.5rem;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    /* CARDS */
+    .card {
+      background: var(--bg2);
+      border: 0.5px solid var(--border);
+      border-radius: var(--card-radius);
+      padding: 2rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .card:hover {
+      border-color: rgba(255,255,255,0.18);
+      transform: translateY(-3px);
+    }
+
+    .card h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+
+    .card-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    /* IMAGE BOX */
+   .image-box {
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  border: 0.5px solid var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-box img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+    /* REPORT BUTTON */
+    .report-card {
+      background: var(--bg3);
+      border: 0.5px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .report-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .report-card a {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent);
+      text-decoration: none;
+      border: 0.5px solid var(--accent);
+      padding: 6px 14px;
+      border-radius: 99px;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .report-card a:hover {
+      background: var(--accent);
+      color: #0d0d0d;
+    }
+
+    /* CERTIFICATES */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .cert-card {
+      background: var(--bg2);
+      border: 0.5px solid var(--border);
+      border-radius: var(--card-radius);
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .cert-card:hover {
+      border-color: rgba(200,240,77,0.3);
+      transform: translateY(-3px);
+    }
+
+    .cert-card img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* PROJECTS BUTTON */
+    .btn-accent {
+      display: inline-block;
+      padding: 10px 24px;
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #0d0d0d;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-accent:hover {
+      background: #d4f566;
+      transform: translateY(-2px);
+    }
+
+    /* MENTOR CARDS */
+    .mentor-card {
+      background: var(--bg2);
+      border: 0.5px solid var(--border);
+      border-radius: var(--card-radius);
+      padding: 2rem;
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mentor-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .mentor-card:hover {
+      border-color: rgba(255,255,255,0.18);
+      transform: translateY(-4px);
+    }
+
+    .mentor-card:hover::before { transform: scaleX(1); }
+
+    .mentor-avatar {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--bg3);
+      border: 0.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .mentor-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .mentor-role {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    .mentor-email {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .mentor-email:hover { color: var(--accent2); }
+
+    /* FOOTER */
+    footer {
+      border-top: 0.5px solid var(--border);
+      padding: 2.5rem 5vw;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    footer p {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .page-header { animation: fadeUp 0.8s ease both; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 0 1.5rem; }
+      .nav-links { gap: 1.2rem; }
+      .page { padding: 88px 1.5rem 60px; }
+      .grid { grid-template-columns: 1fr; }
+      .certs-grid { grid-template-columns: 1fr; }
+      .image-box img { height: 220px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">KZ_dev</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a class="active" href="#">Education</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <span class="page-tag">Academic Journey</span>
+    <h1>Education &amp;<br><em>Experience.</em></h1>
+    <p>From self-taught curiosity to a leading SA tech bootcamp — here's how I got here.</p>
   </div>
-</div>
 
-<div class="edubackground">
-  <div class="late-study"> 
- <img src="latestudy.jpeg"><br>
+  <!-- SECTION 01: WETHINKCODE -->
+  <div class="edu-section">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">WeThinkCode_</h2>
+      <div class="section-line"></div>
+    </div>
 
- </div>   
-
-        <div class="schoolSummary-2">
-
-        <h1>Self-Learning</h1>
+    <div class="grid">
+      <div class="card">
+        <h3>Bootcamp Experience</h3>
+        <div class="card-label">Software Engineering Academy</div>
         <p>
-   learned to code by building projects that provide 
-  solutions to real-world challenges—whether they affect others or myself personally. 
-  Through this approach, I continuously upskill while contributing something meaningful.<br>
-  Software development has been a profession I have pursued even before joining WeThinkCode_. 
-  During my time at university, I often taught myself how to code, driven by curiosity.<br>
-<br><br>
-     <p  > <a style="margin-left:42% ;" href="projects.html"> View Projects</a> </p>
-      <div class="selfLearn">
-</div>
-</p>  
-<div class="aboutme">  
-            <h1>Mentors</h1>
-<p>
-  Provides guidance on how companies manage coding projects and offers constructive feedback on my work.
-</p>
-<p> 
-  <!-- https://piratefsh.github.io/how-to/2016/01/27/how-to-think-in-css.html -->
-<table>
-  <tr><td><strong>Name</strong></td><td>: Sihle Ntuli</td></tr>
-  <tr><td><strong>Occuption</strong></td><td>: Trasnet Engineer</td></tr>
-  <tr><td><strong>Email</strong></td><td>:<a href="mailto:Sihle.Ntuli@transnet.net"> Sihle.Ntuli@transnet.net</a></td></tr></table>
-  <br>
-  <table>
-  <tr><td><strong>Name</strong></td><td>: Magalaweng Clive Mmakola<br><td>WeThinkCode_ Alumnus</td> </td></tr>
-  <tr><td><strong>Occuption</strong></td><td>: BDD Software Developer </td></tr>
-  <tr><td><strong>Email</strong></td><td>:<a href="mailto:mmakolaclivem@gmail.com"> mmakolaclivem@gmail.com</a> 
-  </table>
-<p></p></div>
-    </div>   <div>
-
+          Intensive project-based learning focused on backend development,
+          problem solving, and team collaboration.
+        </p>
+        <p>
+          <strong style="color: var(--text);">31 July 2024:</strong> Completed the final selection week —
+          a defining moment that shifted my path fully into software development.
+        </p>
+        <div class="report-card">
+          <span class="report-label">Khulekani_Zondo_Y1_Report.pdf</span>
+          <a href="Khulekani_Zondo_Y1_Report-2.pdf" target="_blank">View PDF</a>
+        </div>
       </div>
-    
-</div>   
 
+      <div class="image-box">
+        <img src="bootCamp.jpeg" alt="WeThinkCode_ bootcamp" />
+      </div>
+    </div>
 
-    </body>
-    
+    <!-- CERTIFICATES -->
+    <div class="certs-grid">
+      <div class="cert-card">
+        <img src="Khulekani  - Certificate - MSAISkillsDev Course - 20250428141732.png" alt="MS AI Skills Dev Certificate" />
+      </div>
+      <div class="cert-card">
+        <img src="Khulekani  GENAI.png" alt="GenAI Certificate" />
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 02: BACKGROUND -->
+  <div class="edu-section">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Background</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>University</h3>
+        <div class="card-label">University of KwaZulu-Natal</div>
+        <p>
+          Bachelor of Arts in Cultural Heritage and Tourism —
+          a foundation that sharpened analytical thinking and
+          an understanding of real-world social systems.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Self-Learning</h3>
+        <div class="card-label">Building to learn</div>
+        <p>
+          I learned to code by building real-world solutions.
+          My focus has always been creating meaningful software
+          while continuously improving my skills — long before joining WeThinkCode_.
+        </p>
+        <a href="projects.html" class="btn-accent">View Projects</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 03: MENTORS -->
+  <div class="edu-section">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="section-title">Mentors</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="grid">
+      <div class="mentor-card">
+        <div class="mentor-avatar">SN</div>
+        <div class="mentor-name">Sihle Ntuli</div>
+        <div class="mentor-role">Transnet Engineer</div>
+        <p style="font-size: 13px; color: var(--muted); margin-bottom: 1rem;">
+          Provides guidance on how companies manage coding projects and offers
+          constructive feedback on my work.
+        </p>
+        <a href="mailto:Sihle.Ntuli@transnet.net" class="mentor-email">Sihle.Ntuli@transnet.net</a>
+      </div>
+
+      <div class="mentor-card">
+        <div class="mentor-avatar">CM</div>
+        <div class="mentor-name">Magalaweng Clive Mmakola</div>
+        <div class="mentor-role">BDD Software Developer · WeThinkCode_ Alumnus</div>
+        <p style="font-size: 13px; color: var(--muted); margin-bottom: 1rem;">
+          Provides guidance on how companies manage coding projects and offers
+          constructive feedback on my work.
+        </p>
+        <a href="mailto:mmakolaclivem@gmail.com" class="mentor-email">mmakolaclivem@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2024 <a href="index.html">Khulekani Zondo</a> · Fullstack Developer · South Africa</p>
+  <p>Built with HTML · CSS · #caffeine</p>
+</footer>
+
+</body>
 </html>

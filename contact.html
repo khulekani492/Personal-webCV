@@ -1,35 +1,385 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Contact</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-   <body>
-  <div class="topnav">
-  <a href="index.html"> HOME</a>
-  <a href="education.html">EDUCATION</a>
-  <a class="active"    href="contact.html">CONTACT</a>
-  <a href="projects.html">PROJECTS</a>
-    <img style="position: absolute; width: 200px; height: 200px;"
-  src="https://cdn.pixabay.com/photo/2017/08/25/13/36/code-geek-2680204_640.png" 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Khulekani Zondo</title>
 
-  alt="AI icon"
-/>   
-</div> <br><br>
-<div class="contacts"> 
-<div class="header"> 
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700&display=swap" rel="stylesheet" />
 
-<h1>Contacts</h1>
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --bg2: #141414;
+      --bg3: #1c1c1c;
+      --border: rgba(255,255,255,0.08);
+      --accent: #c8f04d;
+      --accent2: #f0d060;
+      --text: #f0ede6;
+      --muted: #888;
+      --card-radius: 16px;
+      --font-display: 'DM Serif Display', serif;
+      --font-body: 'Syne', sans-serif;
+      --font-mono: 'DM Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2.5rem;
+      background: rgba(13,13,13,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 0.5px solid var(--border);
+      z-index: 100;
+    }
+
+    .nav-logo {
+      font-family: var(--font-mono);
+      color: var(--accent);
+      font-size: 13px;
+      text-decoration: none;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      border-bottom: none;
+    }
+
+    .nav-links a.active { color: var(--accent); }
+    .nav-links a:hover { color: var(--text); opacity: 1; }
+
+    /* PAGE */
+    .page {
+      padding: 96px 5vw 80px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      padding: 48px 0 56px;
+      animation: fadeUp 0.8s ease both;
+      position: relative;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -20vw;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(200,240,77,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .page-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      border: 0.5px solid var(--accent);
+      padding: 4px 12px;
+      border-radius: 99px;
+      margin-bottom: 1.25rem;
+      text-transform: uppercase;
+    }
+
+    .page-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.08;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+
+    .page-header h1 em {
+      font-style: italic;
+      color: var(--accent2);
+    }
+
+    .page-header p {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 480px;
+    }
+
+    /* SECTION HEADER */
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-num {
+      font-family: var(--font-mono);
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--text);
+    }
+
+    .section-line {
+      flex: 1;
+      height: 0.5px;
+      background: var(--border);
+      margin-left: 0.5rem;
+    }
+
+    /* CONTACT CARD */
+    .contact-card {
+      background: var(--bg2);
+      border: 0.5px solid var(--border);
+      border-radius: var(--card-radius);
+      overflow: hidden;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.25rem 2rem;
+      border-bottom: 0.5px solid var(--border);
+      transition: background 0.2s;
+    }
+
+    .contact-item:last-child { border-bottom: none; }
+    .contact-item:hover { background: var(--bg3); }
+
+    .contact-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: var(--bg3);
+      border: 0.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .contact-body { flex: 1; }
+
+    .label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .value {
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .value a {
+      color: var(--accent2);
+      text-decoration: none;
+      border-bottom: 0.5px solid transparent;
+      transition: border-color 0.2s, opacity 0.2s;
+    }
+
+    .value a:hover {
+      border-bottom-color: var(--accent2);
+      opacity: 0.8;
+    }
+
+    /* AVAILABILITY BADGE */
+    .availability {
+      margin-top: 1.5rem;
+      background: var(--bg2);
+      border: 0.5px solid rgba(200,240,77,0.2);
+      border-radius: var(--card-radius);
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .avail-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+      flex-shrink: 0;
+      animation: pulse 2s infinite;
+    }
+
+    .avail-text {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 0.5px solid var(--border);
+      padding: 2.5rem 5vw;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 60px;
+    }
+
+    footer p {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: none;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 0 1.5rem; }
+      .nav-links { gap: 1.2rem; }
+      .page { padding: 88px 1.5rem 60px; }
+      .contact-item { padding: 1rem 1.25rem; gap: 1rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">KZ_dev</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a class="active" href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <span class="page-tag">Let's connect</span>
+    <h1>Get in<br><em>Touch.</em></h1>
+    <p>Open to opportunities, collaborations, and interesting conversations.</p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Contact Details</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="contact-card">
+
+    <div class="contact-item">
+      <div class="contact-icon">📞</div>
+      <div class="contact-body">
+        <div class="label">Phone</div>
+        <div class="value">082 669 0384</div>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-icon">✉️</div>
+      <div class="contact-body">
+        <div class="label">Email</div>
+        <div class="value">
+          <a href="mailto:khulekaniszondo6@gmail.com">khulekaniszondo6@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-icon">🐙</div>
+      <div class="contact-body">
+        <div class="label">GitHub</div>
+        <div class="value">
+          <a href="https://github.com/Khulekani492" target="_blank">github.com/Khulekani492</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-icon">💼</div>
+      <div class="contact-body">
+        <div class="label">LinkedIn</div>
+        <div class="value">
+          <a href="https://www.linkedin.com/in/khulekani-s-zondo-149bb134a" target="_blank">linkedin.com/in/khulekani-s-zondo</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- AVAILABILITY -->
+  <div class="availability">
+    <div class="avail-dot"></div>
+    <span class="avail-text">Currently available for full-time roles and freelance projects</span>
+  </div>
+
 </div>
-<div class="contactsinfo"> 
-<table>
-  <tr><td><strong>Phone</strong></td><td>: 082 669 0384</td></tr>
-  <tr><td><strong>GitHub</strong></td><td>: <a href="https://github.com/Khulekani492" target="_blank">Khulekani492</a></td></tr>
-  <tr><td><strong>LinkedIn</strong></td><td>: <a href="https://www.linkedin.com/in/khulekani-s-zondo-149bb134a" target="_blank">linkedin.com/in/khulekani-s-zondo-149bb134a</a></td></tr>
-  <tr><td><strong>Email</strong></td><td>: <a href="mailto:khulekaniszondo6@gmail.com">khulekaniszondo6@gmail.com</a></td></tr>
-</table>
-</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2024 <a href="index.html">Khulekani Zondo</a> · Fullstack Developer · South Africa</p>
+  <p>Built with HTML · CSS · #caffeine</p>
+</footer>
 
 </body>
-
 </html>
